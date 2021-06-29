@@ -1,4 +1,7 @@
-#pragma once
+#ifndef __EVENT_CC
+
+#define __EVENT_CC
+
 #include "uniq.h"
 #include "Name.h"
 #include "call.h"
@@ -74,3 +77,5 @@ TEST(EventEmitter){
   WAIT(V>=17);
 };
 }// UniQ • Released under GPL 3 licence
+
+#endif

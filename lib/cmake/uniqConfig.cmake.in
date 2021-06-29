@@ -1,0 +1,10 @@
+get_filename_component(UNIQ_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+include(CMakeFindDependencyMacro)
+
+list(APPEND CMAKE_MODULE_PATH ${UNIQ_CMAKE_DIR})
+
+if(NOT TARGET uniq::uniq)
+    include("${UNIQ_CMAKE_DIR}/uniqTargets.cmake")
+endif()
+
+set(UNIQ_LIBRARIES uniq::uniq)
